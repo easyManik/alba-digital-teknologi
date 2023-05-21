@@ -2,6 +2,7 @@ import React from "react";
 import img from "../../img/img";
 import "./home.css";
 import LineYellow from "../../img/lineYellow.svg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -9,9 +10,9 @@ const Home = () => {
       <div className="container">
         <div className="d-flex flex-row justify-content-between my-4  align-items-center">
           <div style={{ color: "#FFCE07" }}>
-            <a href="/profile">
+            <Link to="/profile">
               <img src={img.alba} alt="" />
-            </a>
+            </Link>
           </div>
           <div className="d-flex justify-content-evenly">
             <a
