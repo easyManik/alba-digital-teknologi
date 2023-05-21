@@ -16,11 +16,6 @@ const userReducer = (state = initialState, action) => {
       ...state,
       isLoading: false,
     };
-  } else if (action.type === "GET_PROFILE") {
-    return {
-      ...state,
-      user: action.payload,
-    };
   } else {
     return state;
   }

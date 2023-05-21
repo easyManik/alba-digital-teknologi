@@ -56,11 +56,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="container" style={{ height: "100vh" }}>
+      <section id="about" className="container" style={{ height: "100vh" }}>
         <div className="container">
-          <p id="about" style={{ color: "#C4C4C4" }}>
-            Complete Package
-          </p>
+          <p style={{ color: "#C4C4C4" }}>Complete Package</p>
           <h1>
             <b>From product design to software contonuous delivery</b>
           </h1>
