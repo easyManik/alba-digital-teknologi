@@ -32,9 +32,11 @@ import pag3 from "./Rectangle 1923.svg";
 import pag4 from "./Rectangle1919.svg";
 import pag5 from "./Rectangle 1921.svg";
 import bgTestimonial from "./Group 82.png";
+import whatsapp from "./WhatsApp Button 1.svg";
 
 const img = {
   alba,
+  whatsapp,
   bgTestimonial,
   pag1,
   pag2,

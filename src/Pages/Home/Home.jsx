@@ -456,7 +456,7 @@ const Home = () => {
               <p>Career</p>
             </div>
           </div>
-          <div className="col-4 my-5 text-start">
+          <div className="col-3 my-5 text-start">
             <h1>
               <b>Contact</b>
             </h1>
@@ -473,7 +473,9 @@ const Home = () => {
               </p>
             </div>
           </div>
+          <img src={img.whatsapp} alt="" className="align-self-end mb-5" />
         </div>
+
         <hr />
         <div
           className="d-flex justify-content-between"
