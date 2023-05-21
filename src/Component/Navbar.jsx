@@ -11,21 +11,41 @@ const Navbar = (service, about, portofolio, blog, contactus, career) => {
         </Link>
       </div>
       <div className="d-flex justify-content-evenly">
-        <a className="mx-4 btn" href={service}>
+        <Link
+          className="mx-4"
+          style={{ textDecoration: "none", color: "black" }}
+          to={service}
+        >
           <b>Service</b>
-        </a>
-        <a className="mx-4 btn" href={about}>
+        </Link>
+        <Link
+          className="mx-4 "
+          style={{ textDecoration: "none", color: "black" }}
+          to={about}
+        >
           <b>About</b>
-        </a>
-        <a className="mx-4 btn" href={portofolio}>
+        </Link>
+        <Link
+          className="mx-4  "
+          style={{ textDecoration: "none", color: "black" }}
+          to={portofolio}
+        >
           <b>Portofolio</b>
-        </a>
-        <a className="mx-4 btn" href={blog}>
+        </Link>
+        <Link
+          className="mx-4  "
+          style={{ textDecoration: "none", color: "black" }}
+          to={blog}
+        >
           <b>Blog</b>
-        </a>
-        <a className="mx-4 btn" href={career}>
+        </Link>
+        <Link
+          className="mx-4  "
+          style={{ textDecoration: "none", color: "black" }}
+          to={career}
+        >
           <b>Career</b>
-        </a>
+        </Link>
       </div>
       <div>
         <button
@@ -34,9 +54,13 @@ const Navbar = (service, about, portofolio, blog, contactus, career) => {
             backgroundColor: "#FFCE07",
             borderRadius: "50px",
           }}
-          onClick={contactus}
         >
-          <b>Contact Us</b>
+          <a
+            href={contactus}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <b>Contact Us</b>
+          </a>
         </button>
       </div>
     </div>

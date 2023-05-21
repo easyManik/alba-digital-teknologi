@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../Component/Navbar";
 import img from "../../img/img";
 import "./home.css";
 import LineYellow from "../../img/lineYellow.svg";
@@ -8,14 +7,66 @@ const Home = () => {
   return (
     <div>
       <div className="container">
-        <Navbar
-          service="#service"
-          about="#about"
-          portofolio="#portofolio"
-          blog="#blog"
-          contactus="#contactus"
-          career="#career"
-        />
+        <div className="d-flex flex-row justify-content-between my-4  align-items-center">
+          <div style={{ color: "#FFCE07" }}>
+            <a href="/profile">
+              <img src={img.alba} alt="" />
+            </a>
+          </div>
+          <div className="d-flex justify-content-evenly">
+            <a
+              className="mx-4"
+              style={{ textDecoration: "none", color: "black" }}
+              href="#service"
+            >
+              <b>Service</b>
+            </a>
+            <a
+              className="mx-4 "
+              style={{ textDecoration: "none", color: "black" }}
+              href="#about"
+            >
+              <b>About</b>
+            </a>
+            <a
+              className="mx-4  "
+              style={{ textDecoration: "none", color: "black" }}
+              href="#portofolio"
+            >
+              <b>Portofolio</b>
+            </a>
+            <a
+              className="mx-4  "
+              style={{ textDecoration: "none", color: "black" }}
+              href="#blog"
+            >
+              <b>Blog</b>
+            </a>
+            <a
+              className="mx-4  "
+              style={{ textDecoration: "none", color: "black" }}
+              href="#career"
+            >
+              <b>Career</b>
+            </a>
+          </div>
+          <div>
+            <button
+              className="btn px-5"
+              style={{
+                backgroundColor: "#FFCE07",
+                borderRadius: "50px",
+              }}
+            >
+              <a
+                href="#contactus"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <b>Contact Us</b>
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
 
       <section
@@ -293,7 +344,7 @@ const Home = () => {
           <div>baris 2</div>
         </div>
       </section>
-      <section id="@career" className="mb-5 container">
+      <section id="career" className="mb-5 container">
         <div
           id="myCarousel"
           className="carousel slide "

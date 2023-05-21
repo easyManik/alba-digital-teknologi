@@ -40,16 +40,16 @@ const Profile = () => {
       </div>
       <div className=" my-5 d-flex flex-row justify-content-between">
         <button className="btn  mx-5" style={{ backgroundColor: "#FFCE07" }}>
-          <Link className="btn col-12" to="/home">
+          <a style={{ textDecoration: "none", color: "black" }} href="/home">
             <b>Page Home</b>
-          </Link>
+          </a>
         </button>
         <button
           onClick={handleLogout}
-          className="btn  mx-5"
+          className="btn mx-5"
           style={{ backgroundColor: "#FFCE07" }}
         >
-          <Link className="btn" to="/home">
+          <Link style={{ textDecoration: "none", color: "black" }} to="/home">
             <b>Log Out</b>
           </Link>
         </button>
