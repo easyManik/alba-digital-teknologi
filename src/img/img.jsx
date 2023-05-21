@@ -31,9 +31,11 @@ import pag2 from "./Rectangle 1920.svg";
 import pag3 from "./Rectangle 1923.svg";
 import pag4 from "./Rectangle1919.svg";
 import pag5 from "./Rectangle 1921.svg";
+import bgTestimonial from "./Group 82.png";
 
 const img = {
   alba,
+  bgTestimonial,
   pag1,
   pag2,
   pag3,

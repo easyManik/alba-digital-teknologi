@@ -2,28 +2,30 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Alba from "./../img/alba.svg";
 
-const Navbar = () => {
+const Navbar = (service, about, portofolio, blog, contactus, career) => {
   return (
     <div className="d-flex flex-row justify-content-between my-4  align-items-center">
       <div style={{ color: "#FFCE07" }}>
-        <img src={Alba} alt="" />
+        <Link to="/profile">
+          <img src={Alba} alt="" />
+        </Link>
       </div>
       <div className="d-flex justify-content-evenly">
-        <Link className="mx-4 btn">
+        <a className="mx-4 btn" href={service}>
           <b>Service</b>
-        </Link>
-        <Link className="mx-4 btn">
+        </a>
+        <a className="mx-4 btn" href={about}>
           <b>About</b>
-        </Link>
-        <Link className="mx-4 btn">
+        </a>
+        <a className="mx-4 btn" href={portofolio}>
           <b>Portofolio</b>
-        </Link>
-        <Link className="mx-4 btn">
+        </a>
+        <a className="mx-4 btn" href={blog}>
           <b>Blog</b>
-        </Link>
-        <Link className="mx-4 btn">
+        </a>
+        <a className="mx-4 btn" href={career}>
           <b>Career</b>
-        </Link>
+        </a>
       </div>
       <div>
         <button
@@ -32,6 +34,7 @@ const Navbar = () => {
             backgroundColor: "#FFCE07",
             borderRadius: "50px",
           }}
+          onClick={contactus}
         >
           <b>Contact Us</b>
         </button>

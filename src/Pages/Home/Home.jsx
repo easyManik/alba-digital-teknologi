@@ -2,18 +2,24 @@ import React from "react";
 import Navbar from "../../Component/Navbar";
 import img from "../../img/img";
 import "./home.css";
-import Carousel from "react-bootstrap/Carousel";
 import LineYellow from "../../img/lineYellow.svg";
-const css = { maxWidth: "100%", height: "50vw" };
 
 const Home = () => {
   return (
     <div>
       <div className="container">
-        <Navbar />
+        <Navbar
+          service="#service"
+          about="#about"
+          portofolio="#portofolio"
+          blog="#blog"
+          contactus="#contactus"
+          career="#career"
+        />
       </div>
 
       <section
+        id="service"
         style={{
           backgroundImage: `url(${img.home})`,
           backgroundRepeat: "no-repeat",
@@ -52,7 +58,9 @@ const Home = () => {
 
       <section className="container" style={{ height: "100vh" }}>
         <div className="container">
-          <p style={{ color: "#C4C4C4" }}>Complete Package</p>
+          <p id="about" style={{ color: "#C4C4C4" }}>
+            Complete Package
+          </p>
           <h1>
             <b>From product design to software contonuous delivery</b>
           </h1>
@@ -174,7 +182,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section className="container mt-2" style={{ height: "100vh" }}>
+      <section
+        id="portofolio"
+        className="container mt-2"
+        style={{ height: "100vh" }}
+      >
         <p style={{ color: "gray" }}>Portofolio</p>
         <h1>The software that we build takes our clients to the next level</h1>
         <div className="d-flex flex-row">
@@ -264,7 +276,18 @@ const Home = () => {
           <b>Learn more</b>
         </button>
       </section>
-      <section className="mb-5 " style={{ height: "100vh" }}>
+      <section
+        id="blog"
+        className="mb-5 "
+        style={{
+          backgroundImage: `url(${img.bgTestimonial})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "bottom left",
+          backgroundSize: "90%",
+
+          height: "90vh",
+        }}
+      >
         <p style={{ color: "gray" }}>Testimonials</p>
         <h1>What client love in working with Albatech Team</h1>
         <div>
@@ -272,7 +295,7 @@ const Home = () => {
           <div>baris 2</div>
         </div>
       </section>
-      <section className="mb-5 container">
+      <section id="@career" className="mb-5 container">
         <div
           id="myCarousel"
           className="carousel slide "
@@ -288,54 +311,39 @@ const Home = () => {
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
-          <div className="carousel-inner">
+          <div className="carousel-inner d-flex justify-content-center">
             <div className="item">
               <div className="row">
-                <div className="col-sm-2">
+                <div style={{ width: "22vh" }}>
                   <div className="thumb-wrapper">
-                    <span className="wish-icon">
-                      <i className="fa fa-heart-o"></i>
-                    </span>
                     <div className="img-box">
                       <img src={img.pag1} className="img-responsive" alt="" />
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-2">
+                <div style={{ width: "22vh" }}>
                   <div className="thumb-wrapper">
-                    <span className="wish-icon">
-                      <i className="fa fa-heart-o"></i>
-                    </span>
                     <div className="img-box">
                       <img src={img.pag2} className="img-responsive" alt="" />
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-2">
+                <div style={{ width: "22vh" }}>
                   <div className="thumb-wrapper">
-                    <span className="wish-icon">
-                      <i className="fa fa-heart-o"></i>
-                    </span>
                     <div className="img-box">
                       <img src={img.pag3} className="img-responsive" alt="" />
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-2">
+                <div style={{ width: "22vh" }}>
                   <div className="thumb-wrapper">
-                    <span className="wish-icon">
-                      <i className="fa fa-heart-o"></i>
-                    </span>
                     <div className="img-box">
                       <img src={img.pag4} className="img-responsive" alt="" />
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-2">
+                <div style={{ width: "22vh" }}>
                   <div className="thumb-wrapper">
-                    <span className="wish-icon">
-                      <i className="fa fa-heart-o"></i>
-                    </span>
                     <div className="img-box">
                       <img src={img.pag5} className="img-responsive" alt="" />
                     </div>
@@ -368,7 +376,7 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className="container ">
+      <footer id="contactus" className="container ">
         <hr />
         <div className=" d-flex flex-row">
           <div className="col-4 my-5">
@@ -381,7 +389,7 @@ const Home = () => {
               Albatch acts a corporate partnerto help digitize their business to
               accelerate trends in remote work
             </p>
-            <div className="d-flex justify-content-around mb-5">
+            <div className="col-6 d-flex justify-content-between mb-5">
               <img src={img.FB} alt="" />
               <img src={img.Ig} alt="" />
               <img src={img.Linked} alt="" />

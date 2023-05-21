@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginApp } from "../Redux/Action/login";
+import img from "../../img/img";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,11 +22,16 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div>Login</div>{" "}
-      <Link rel="stylesheet" to="/home">
-        home
-      </Link>
+    <div style={{ backgroundColor: "rgba(255, 206, 7, 0.2)", height: "100vh" }}>
+      <div>
+        <img src={img.alba} alt="" className="p-5" style={{ width: "35vh" }} />
+        <div className="p-5" style={{ color: "grey" }}>
+          <h1>
+            <b>Login Page</b>
+          </h1>
+          <p>Masukkan email dan kata sandi anda</p>
+        </div>
+      </div>
       <form onSubmit={login}>
         <div className="m-3">
           <input
@@ -52,12 +58,10 @@ const Login = () => {
         </div>
 
         <button
+          className="btn py-3 px-5 mt-5"
           style={{
             borderRadius: "10px",
-            padding: "5px",
-            width: "150px",
-            backgroundColor: "green",
-            color: "white",
+            backgroundColor: "#FFCE07",
           }}
         >
           <b>Login</b>

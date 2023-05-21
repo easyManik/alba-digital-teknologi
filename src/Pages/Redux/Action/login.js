@@ -15,6 +15,11 @@ export const loginApp = (data, navigate) => async (dispatch) => {
       navigate("/profile");
     });
   } catch (e) {
+    swal({
+      title: "Silahkan masukkan email dan kata sandi yang benar!",
+      text: `${e}`,
+      icon: "error",
+    });
     console.log("Login fail");
     console.log(e);
   }
