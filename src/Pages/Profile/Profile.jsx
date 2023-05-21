@@ -21,7 +21,7 @@ const Profile = () => {
       .catch((e) => {
         console.log("error");
       });
-  }, []);
+  }, [user]);
 
   const handleLogout = async () => {
     await localStorage.clear();
