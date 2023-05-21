@@ -7,7 +7,7 @@ import swal from "sweetalert";
 
 const Profile = () => {
   const [data, setData] = useState([]);
-  let user = `https://reqres.in/api/login`;
+  let user = `https://reqres.in/api/login?per_page=12`;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mb-5">
       <div>
         <Navbar />
       </div>
@@ -77,7 +77,18 @@ const Profile = () => {
                   <td>{product.id}</td>
                   <td>{product.name}</td>
                   <td>{product.year}</td>
-                  <td>{product.color}</td>
+                  <td>
+                    <span
+                      className="border p-2"
+                      style={{
+                        backgroundColor: `${product.color}`,
+
+                        borderRadius: "50px",
+                      }}
+                    >
+                      {product.color}
+                    </span>
+                  </td>
                   <td>{product.pantone_value}</td>
                 </tr>
               ))}
